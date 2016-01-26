@@ -11,14 +11,14 @@ define('WP_THEME_PATH', get_template_directory());
 define('WP_THEME_URI', get_template_directory_uri());
 
 /**
- * Defining a constant for the theme slug
+ * Defining constants for theme slug and prefix
  *
- * In this way we don't have to remember the theme slug every time we need it,
- * and, much more important, don't have to change it every time we begin a new
- * project!!
+ * In this way we don't have to remember them every single time,and, much more
+ * important, don't have to change it every time we begin a new project!!
  */
 
 define('WP_THEME_SLUG', 'base_theme');
+define('WP_THEME_PREFIX', 'mybt');
 
 /**
  * Including auxiliary files

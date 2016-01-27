@@ -5,7 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "bower": "bower",
     "predev": "npm run prestart",
     "dev": "npm run gulp dev",
     "prestart": "npm install",

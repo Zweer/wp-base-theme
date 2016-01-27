@@ -1,0 +1,28 @@
+{
+  "name": "base-theme",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "bower": "bower",
+    "predev": "npm run prestart",
+    "dev": "npm run gulp dev",
+    "prestart": "npm install",
+    "start": "npm run gulp",
+    "deploy": "git pull && git submodule update --init --recursive && npm start",
+    "cron": "git add --all :/ && git commit -am \"Automatic commit\" && git push",
+    "postcron": "npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zweer/wp-base-theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "generator"
+  ],
+  "author": "Niccolo' Olivieri <flicofloc@gmail.com>",
+  "license": "ISC"
+}

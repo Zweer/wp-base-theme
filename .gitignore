@@ -5,6 +5,7 @@ css
 # Vendor directories
 _js/vendor
 _scss/vendor
+fonts/vendor
 
 ### Sass template
 .sass-cache/

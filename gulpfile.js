@@ -70,13 +70,17 @@ gulp.task('webpack', function (done) {
 
 gulp.task('modernizr', ['webpack'], function () {
     return gulp
-        .src('js/**/*')
+        .src('_js/**/*')
         .pipe($.modernizr({
             "options": [
                 "prefixed",
                 "setClasses"
             ]
         }))
+        .pipe($.sourcemaps.init())
+        .pipe($.rename({ suffix: '.min' }))
+        .pipe($.uglify())
+        .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest('js/'));
 });
 

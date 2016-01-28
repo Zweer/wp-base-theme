@@ -10,9 +10,11 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'js'),
-        filename: '[name].js',
-        chunkFilename: '[chunkhash].js'
+        filename: '[name].min.js',
+        chunkFilename: '[chunkhash].js',
+        sourceMapFilename: '[file].map'
     },
+    devtool: 'source-map',
     plugins: [
         new webpack.ProvidePlugin({
             jQuery: "jquery",

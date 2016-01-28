@@ -1,7 +1,10 @@
 ### Project Specific
-# assets directories
+# Assets directories
 js
 css
+# Vendor directories
+_js/vendor
+_scss/vendor
 
 ### Sass template
 .sass-cache/

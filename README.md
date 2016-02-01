@@ -33,3 +33,17 @@ The JS pre-processor of choice is [Webpack](https://webpack.github.io/).
 
 We put JS source files in the `_js` folder (we can also use ES2015 if your NodeJS environment allows them) and we'll find
 the compiled files in the `js` one, along with their `.map` file.
+
+## Plugins
+
+Here is a list of suggested plugins:
+
+- Advanced Custom Fields PRO
+- Broken Link Checker (finds broken links)
+- DuracellTomi's Google Tag Manager (adds Google Tag Manager beacon)
+- Force Regenerate Thumbnails (forces the regeneration of thumbnails)
+- Google Pagespeed Insights (uses Google Pagespeed to determine page performances)
+- iThemes Security Pro (security ninja!!)
+- Post Thumbnail Editor (allows you to edit the post thumbnail)
+- WPML
+- WordPress SEO by Yoast

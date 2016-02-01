@@ -84,16 +84,24 @@ gulp.task('modernizr', ['webpack'], function () {
         .pipe(gulp.dest('js/'));
 });
 
+gulp.task('gettext', function () {
+    return gulp
+        .src('language/**/*.po')
+        .pipe($.gettext())
+        .pipe(gulp.dest('language/'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(['_scss/**/*'], ['scss']);
     gulp.watch(['_js/**/*'], ['modernizr']);
+    gulp.watch(['language/**/*.po'], ['gettext']);
 });
 
 gulp.task('default', function (done) {
     runSequence(
         'clean',
         ['bower:js', 'bower:scss', 'bower:scss:bootstrap', 'bower:scss:fontawesome', 'bower:font:fontawesome'],
-        'scss',
+        ['scss', 'gettext'],
         'clean:bower',
         'modernizr',
         done

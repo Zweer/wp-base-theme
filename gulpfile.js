@@ -86,15 +86,15 @@ gulp.task('modernizr', ['webpack'], function () {
 
 gulp.task('gettext', function () {
     return gulp
-        .src('language/**/*.po')
+        .src('languages/**/*.po')
         .pipe($.gettext())
-        .pipe(gulp.dest('language/'));
+        .pipe(gulp.dest('languages/'));
 });
 
 gulp.task('watch', function () {
     gulp.watch(['_scss/**/*'], ['scss']);
     gulp.watch(['_js/**/*'], ['modernizr']);
-    gulp.watch(['language/**/*.po'], ['gettext']);
+    gulp.watch(['languages/**/*.po'], ['gettext']);
 });
 
 gulp.task('default', function (done) {
